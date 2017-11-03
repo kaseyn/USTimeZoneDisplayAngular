@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+<button (click)="zone = 'PST'" [ngClass]="{'yellow': zone === 'PST'}">PST</button>
+<button (click)="zone = 'MST'" [ngClass]="{'yellow': zone === 'MST'}">MST</button>
+<button (click)="zone = 'CST'" [ngClass]="{'yellow': zone === 'CST'}">CST</button>
+<button (click)="zone = 'EST'" [ngClass]="{'yellow': zone === 'EST'}">EST</button>
+<button (click)="zone = null">Clear</button>
+<h2 *ngIf='zone'>{{ date | date: 'longDate' : zone }} {{ date | date: 'shortTime' : zone }}</h2>
